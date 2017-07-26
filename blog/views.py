@@ -1,6 +1,10 @@
+#ecoding:utf-8
 from django.shortcuts import render
-from djang.http import HttpResponse
+from django.http import HttpResponse
 
 def index(request):
-    return HttpResponse("欢迎访问我的博客首页！")
-
+    #return HttpResponse("娆㈣繋鏉ュ埌鎴戠殑鍗氬!")
+    return render(request, 'blog/index.html', context={
+        'title': '鎴戠殑鍗氬棣栭〉_nick',
+        'welcome': '娆㈣繋璁块棶鎴戠殑鍗氬棣栭〉_nick'
+    })
